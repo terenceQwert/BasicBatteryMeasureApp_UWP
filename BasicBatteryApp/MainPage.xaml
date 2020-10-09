@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="BasicBatteryApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="735" Width="1190">
+
+    <StackPanel x:Name="image" Margin="0,0,10,50" >
+        <StackPanel.Background>
+            <ImageBrush ImageSource="/Assets/168b3d-720x380.jpg" Stretch="None"/>
+        </StackPanel.Background>
+        <StackPanel VerticalAlignment="Center" Margin="15,30,0,0" >
+            <RadioButton x:Name="AggregateButton" Content="Aggregate results" GroupName="Type" IsChecked="True" />
+            <RadioButton x:Name="IndividualButton" Content="Individual results" GroupName="Type" IsChecked="False" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="GetBatteryReportButton" 
+                Content="Get battery report" 
+                Margin="15,15,0,0" 
+                Click="GetBatteryReport"/>
+        </StackPanel>
+        <StackPanel x:Name="BatteryReportPanel" Margin="15,15,0,0"/>
+    </StackPanel>
+</Page>
