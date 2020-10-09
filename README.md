@@ -1,0 +1,1 @@
+# BasicBatteryMeasureApp_UWP
