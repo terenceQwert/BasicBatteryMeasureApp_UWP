@@ -38,6 +38,7 @@ namespace TrapAp
                 configWindow.Focus();
             else
                 configWindow.ShowDialog();
+
         }
 
         void Exit(object sender, EventArgs e)

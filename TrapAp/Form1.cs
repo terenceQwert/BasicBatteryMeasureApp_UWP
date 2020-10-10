@@ -31,5 +31,26 @@ namespace TrapAp
         {
 
         }
+        void doSomeDelay()
+        {
+            DateTime datetime = DateTime.Now + TimeSpan.FromMilliseconds(100);
+            do
+            {
+
+            } while (DateTime.Now == datetime);
+        }
+
+        private void pBar_MouseMove(object sender, MouseEventArgs e)
+        {
+            pBar.Step = 1;
+            pBar.Maximum = 100;
+            pBar.Minimum = 1;
+            for (int i = 1; i <= 100; i++)
+            {
+                doSomeDelay();
+                pBar.PerformStep();
+            }
+
+        }
     }
 }
